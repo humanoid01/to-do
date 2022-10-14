@@ -1,0 +1,59 @@
+.tasks {
+  width: 400px;
+  margin: 20px auto;
+  font-size: 24px;
+  font-weight: 400;
+  box-shadow: 8px 8px 10px 5px black;
+  border-radius: 10px;
+  background-color: rgba($color: #003366, $alpha: 0.9);
+  padding: 1rem;
+
+  color: #ccc;
+  .tasks__wrapper {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    border-radius: 10px;
+    gap: 5rem;
+    transition: ease 500ms;
+    &:hover {
+      background-color: rgba($color: #666, $alpha: 0.5);
+      cursor: pointer;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    &--delete {
+      color: gray;
+      padding: 2px;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($color: red, $alpha: 0.8);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__element {
+    margin: 1px 0 1px 8px;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    & .finished {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.task-done {
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #666;
+}

@@ -1,0 +1,67 @@
+.add__task {
+  display: flex;
+  justify-content: center;
+}
+
+.add__task--title {
+  text-align: center;
+  color: #11998e;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.add__task--group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.add__task--input {
+  width: 400px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0 7px;
+  border-bottom: 2px solid #9b9b9b;
+  color: #11998e;
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .add__task--label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 12px;
+  }
+}
+
+.add__task--label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.add__task--input:focus {
+  ~ .add__task--label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+}
+
+.add__task--input {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
